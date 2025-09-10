@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan NU-F</title>
+
+  <!-- OG Preview: Copy dari postingan asli nk-001-f -->
+  <meta property="og:title" content="Undangan Pernikahan Idam & Daeli">
+  <meta property="og:description" content="Dengan penuh sukacita, kami mengundang Anda untuk hadir dalam acara pernikahan kami.">
+  <meta property="og:image" content="https://live.staticflickr.com/65535/54768776178_c96b0aa289_c.jpg">
+  <meta property="og:url" content="https://idam.lovestoblog.com/nu-001-f/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Undangan Pernikahan Idam & Daeli">
+  <meta name="twitter:description" content="Dengan penuh sukacita, kami mengundang Anda untuk hadir dalam acara pernikahan kami.">
+  <meta name="twitter:image" content="https://live.staticflickr.com/65535/54771075231_52cbd4b9c3_c.jpg">
+
+  <!-- Redirect otomatis ke situs asli dengan query -->
+  <script>
+    // Ambil query parameter
+    const params = new URLSearchParams(window.location.search);
+    const nomor = params.get("no") || "001";   // default nomor 001
+    const nama = params.get("nama") || "";     // default kosong
+
+    // Tentukan prefix dari nama file
+    const fileName = window.location.pathname.split("/").pop().replace(".html","").toLowerCase(); // nk-f
+    const prefix = fileName.split("-")[0]; // nk, nu, ni
+    const suffix = fileName.split("-")[1]; // f, tf, t, dll
+
+    // Bangun URL asli
+    const target = `https://idam.lovestoblog.com/${prefix}-${nomor}-${suffix}/?nama=${encodeURIComponent(nama)}`;
+
+    // Redirect otomatis
+    window.location.href = target;
+  </script>
+</head>
+<body>
+  <p>Jika tidak diarahkan otomatis, <a id="link" href="#">klik di sini</a>.</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nomor = params.get("no") || "001";
+    const nama = params.get("nama") || "";
+    const fileName = window.location.pathname.split("/").pop().replace(".html","").toLowerCase();
+    const prefix = fileName.split("-")[0];
+    const suffix = fileName.split("-")[1];
+    document.getElementById("link").href = `https://idam.lovestoblog.com/${prefix}-${nomor}-${suffix}/?nama=${encodeURIComponent(nama)}`;
+  </script>
+</body>
+</html>
